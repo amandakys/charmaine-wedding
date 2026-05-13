@@ -1,12 +1,9 @@
 import { HeroGallery } from "@/components/hero/hero-gallery"
 
-const heroImages = [
-  { src: "/images/hero/1.jpg", alt: "Wedding photo 1" },
-  { src: "/images/hero/2.jpg", alt: "Wedding photo 2" },
-  { src: "/images/hero/3.jpg", alt: "Wedding photo 3" },
-  { src: "/images/hero/4.jpg", alt: "Wedding photo 4" },
-  { src: "/images/hero/5.jpg", alt: "Wedding photo 5" },
-]
+const heroImages = Array.from({ length: 15 }, (_, i) => ({
+  src: `/images/hero/${i + 1}.jpg`,
+  alt: `Wedding photo ${i + 1}`,
+}))
 
 export default function Home() {
   return (
