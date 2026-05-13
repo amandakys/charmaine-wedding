@@ -7,7 +7,7 @@ import {
   useTransform,
   MotionValue,
 } from "motion/react"
-import Image from "next/image"
+/* eslint-disable @next/next/no-img-element */
 
 import { cn } from "@/lib/utils"
 import { useScrollIdle } from "@/hooks/use-scroll-idle"
@@ -67,17 +67,10 @@ export function HeroGallery({ images, title, className }: HeroGalleryProps) {
                   )}
                   depth={[1.5, 2.5, 3, 2, 1.8][i]}
                 >
-                  <Image
-                    src={image.src}
+                  <img
+                    src={`/charmaine-wedding${image.src}`}
                     alt={image.alt}
-                    fill
-                    className="object-cover rounded-lg"
-                    sizes={
-                      i === 0
-                        ? "(max-width: 768px) 100vw, 75vw"
-                        : "(max-width: 768px) 50vw, 37vw"
-                    }
-                    priority={i === 0}
+                    className="absolute inset-0 w-full h-full object-cover rounded-lg"
                   />
                 </GalleryCell>
               ))}
