@@ -1,9 +1,24 @@
 import { HeroGallery } from "@/components/hero/hero-gallery"
 
-const heroImages = Array.from({ length: 15 }, (_, i) => ({
-  src: `/images/hero/${i + 1}.jpg`,
-  alt: `Wedding photo ${i + 1}`,
-}))
+const heroImages = [
+  // First 5 are the bento grid
+  { src: "/images/young/hero-1.jpg", alt: "Wedding photo" },
+  { src: "/images/young/hero-2.jpg", alt: "Wedding photo" },
+  { src: "/images/young/hero-3.jpg", alt: "Wedding photo" },
+  { src: "/images/young/hero-4.jpg", alt: "Wedding photo" },
+  { src: "/images/young/hero-5.jpg", alt: "Wedding photo" },
+  // Remaining 10 float in the background
+  { src: "/images/young/imgp0124.jpg", alt: "Photo" },
+  { src: "/images/young/imgp0129.jpg", alt: "Photo" },
+  { src: "/images/young/imgp0130.jpg", alt: "Photo" },
+  { src: "/images/young/imgp0132.jpg", alt: "Photo" },
+  { src: "/images/young/imgp0134.jpg", alt: "Photo" },
+  { src: "/images/young/imgp0138.jpg", alt: "Photo" },
+  { src: "/images/young/imgp0262.jpg", alt: "Photo" },
+  { src: "/images/young/imgp0288.jpg", alt: "Photo" },
+  { src: "/images/young/imgp0382.jpg", alt: "Photo" },
+  { src: "/images/young/imgp0394.jpg", alt: "Photo" },
+]
 
 export default function Home() {
   return (
